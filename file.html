@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+
+  <title>Elvis de Souza Rocha — Supervisão de Manutenção</title>
+  <meta name="description" content="Currículo online de Elvis de Souza Rocha — Supervisão de Manutenção / Produção Industrial / Gestão de Equipes. 20 anos de experiência na área industrial." />
+
+  <!-- Open Graph / Twitter (melhora preview no WhatsApp/LinkedIn) -->
+  <meta property="og:title" content="Elvis de Souza Rocha — Supervisão de Manutenção" />
+  <meta property="og:description" content="Supervisão de Manutenção • Produção Industrial • Gestão de Equipes • GLP • 20 anos na indústria." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/foto-elvis.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon simples (opcional: substitua depois por um .ico/.png) -->
+  <link rel="icon" href="assets/foto-elvis.jpg" />
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.06);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --line: rgba(255,255,255,.14);
+      --accent: #7c3aed;
+      --accent2:#22c55e;
+      --shadow: 0 18px 55px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 14px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f7fb;
+        --card: rgba(0,0,0,.06);
+        --card2: rgba(0,0,0,.04);
+        --text: rgba(0,0,0,.88);
+        --muted: rgba(0,0,0,.62);
+        --line: rgba(0,0,0,.12);
+        --shadow: 0 18px 55px rgba(0,0,0,.10);
+      }
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(124,58,237,.35), transparent 55%),
+        radial-gradient(900px 500px at 85% 15%, rgba(34,197,94,.26), transparent 55%),
+        radial-gradient(1200px 700px at 50% 105%, rgba(59,130,246,.22), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 22px 18px 48px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding: 10px 2px 18px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(0,0,0,.22), rgba(0,0,0,0));
+    }
+
+    .brand{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-weight:700;
+      letter-spacing:.2px;
+      flex-wrap: wrap;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 18px;
+    }
+    @media (max-width: 960px){
+      .grid{grid-template-columns: 1fr;}
+      header{position: static; background: none;}
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+    }
+    @media (max-width: 640px){
+      .hero{flex-direction: column;}
+    }
+
+    .avatar{
+      width: 112px;
+      height: 112px;
+      border-radius: 22px;
+      border:1px solid var(--line);
+      background: var(--card2);
+      overflow:hidden;
+      flex:0 0 auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    h1{
+      margin: 0 0 6px 0;
+      font-size: 30px;
+      line-height:1.15;
+      letter-spacing:.2px;
+    }
+    .subtitle{
+      margin: 0 0 10px 0;
+      color: var(--muted);
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 12px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      text-decoration:none;
+      font-weight:700;
+      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space: nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.22);}
+    .btn:focus{outline: 2px solid rgba(124,58,237,.6); outline-offset: 2px;}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(124,58,237,.95), rgba(59,130,246,.78));
+      border-color: rgba(255,255,255,.18);
+    }
+    .btn.success{
+      background: linear-gradient(135deg, rgba(34,197,94,.90), rgba(16,185,129,.68));
+      border-color: rgba(255,255,255,.18);
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 12px;
+    }
+    .chip{
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+    }
+
+    .section-title{
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .list{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .item{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius2);
+      padding: 12px 12px;
+    }
+    .item h3{
+      margin:0 0 4px 0;
+      font-size: 16px;
+    }
+    .meta{color: var(--muted); font-size: 13px;}
+    .divider{height:1px;background:var(--line);margin:14px 0;}
+    .small{font-size:13px;color:var(--muted)}
+
+    .two-cols{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 640px){
+      .two-cols{grid-template-columns: 1fr;}
+    }
+
+    .filebox{
+      border:1px dashed rgba(255,255,255,.28);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius2);
+      padding: 12px;
+    }
+    .filebox input{width:100%}
+
+    .preview{
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius2);
+      overflow: hidden;
+      display: none;
+    }
+    .preview iframe{
+      width:100%;
+      height: 420px;
+      border: 0;
+      display:block;
+    }
+    .preview img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align:center;
+    }
+
+    code.inline{
+      padding:.15em .45em;
+      border-radius: 9px;
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: .95em;
+    }
+
+    .skip{
+      position:absolute;
+      left:-999px;
+      top:8px;
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.55);
+      color: var(--text);
+      text-decoration:none;
+    }
+    .skip:focus{left:12px; z-index: 999;}
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="wrap">
+    <header aria-label="Topo">
+      <div class="brand">
+        <span class="pill">Currículo Online</span>
+        <span class="pill">Duque de Caxias – RJ</span>
+        <span class="pill">Manutenção Industrial • GLP</span>
+      </div>
+      <a class="pill" href="#publicar">Publicar no LinkedIn/RH</a>
+    </header>
+
+    <div class="grid" id="conteudo">
+      <main class="card" aria-label="Currículo">
+        <section class="hero" aria-label="Apresentação">
+          <div class="avatar" title="Foto">
+            <img src="assets/foto-elvis.jpg" alt="Foto de Elvis de Souza Rocha" />
+          </div>
+
+          <div>
+            <h1>Elvis de Souza Rocha</h1>
+            <p class="subtitle">Supervisão de Manutenção • Produção Industrial • Gestão de Equipes</p>
+
+            <div class="actions" aria-label="Ações">
+              <a class="btn primary" href="assets/Elvis-De-Souza-Rocha-CV.pdf" target="_blank" rel="noreferrer">
+                Ver CV (PDF)
+              </a>
+              <a class="btn" href="assets/Elvis-De-Souza-Rocha-CV.pdf" download>
+                Baixar CV
+              </a>
+
+              <a class="btn" href="https://www.linkedin.com/in/elvis-rocha-equipamentos-glp-602a2492" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+
+              <a class="btn success" href="https://wa.me/5521984258199" target="_blank" rel="noreferrer">
+                WhatsApp
+              </a>
+            </div>
+
+            <div class="chips" aria-label="Destaques">
+              <span class="chip">20 anos na área industrial</span>
+              <span class="chip">Manutenção preventiva/corretiva/programada</span>
+              <span class="chip">Gestão de ativos • custos • indicadores</span>
+              <span class="chip">GLP • carrosséis de enchimento</span>
+              <span class="chip">WEG/SEW • soft starters</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section aria-label="Objetivo">
+          <h2 class="section-title">Objetivo</h2>
+          <p>
+            Atuar na área de Supervisão de Manutenção / Produção Industrial / Gestão de Equipes,
+            contribuindo com minha experiência em processos industriais, liderança técnica, gestão de pessoas e melhoria contínua.
+          </p>
+        </section>
+
+        <section aria-label="Resumo">
+          <h2 class="section-title">Resumo Profissional</h2>
+          <p>
+            Profissional com 20 anos de experiência na área industrial, com atuação em empresas nacionais e multinacionais
+            de grande porte, especialmente no segmento de manutenção industrial, supervisão técnica e gestão de processos.
+            Sólida experiência em planejamento e execução de manutenção preventiva, corretiva e programada, gestão de ativos,
+            melhoria contínua, coordenação de equipes técnicas e acompanhamento de indicadores de desempenho.
+          </p>
+        </section>
+
+        <div class="two-cols" aria-label="Formação e Cursos">
+          <section>
+            <h2 class="section-title">Formação</h2>
+            <ul class="list">
+              <li class="item">
+                <h3>Superior em Processos Gerenciais</h3>
+                <div class="meta">Universidade Veiga de Almeida</div>
+              </li>
+              <li class="item">
+                <h3>Técnico em Mecânica</h3>
+                <div class="meta">Escola Técnica Rezende Rammel</div>
+              </li>
+              <li class="item">
+                <h3>Técnico em Mecatrônica</h3>
+                <div class="meta">Escola Técnica Rezende Rammel</div>
+              </li>
+              <li class="item">
+                <h3>Pós-graduação (em andamento)</h3>
+                <div class="meta">Neurociência, Comunicação e Desenvolvimento Humano</div>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="section-title">Cursos Complementares</h2>
+            <ul class="list">
+              <li class="item"><h3>Indústria 4.0</h3><div class="meta">PUCRS</div></li>
+              <li class="item"><h3>Liderança e Empreendedorismo</h3><div class="meta">UVA</div></li>
+              <li class="item"><h3>Gestão de Conflitos</h3><div class="meta">ENAP</div></li>
+              <li class="item"><h3>Gestão de Riscos</h3><div class="meta">ENAP</div></li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="divider"></div>
+
+        <section aria-label="Experiência">
+          <h2 class="section-title">Experiência Profissional</h2>
+          <ul class="list">
+            <li class="item">
+              <h3>MAKEEN ENERGY DO BRASIL LTDA — Supervisor de Manutenção</h3>
+              <div class="meta">05/2025 – Atual</div>
+              <div class="small">
+                Supervisão das atividades de manutenção; gestão de pessoas (feedbacks, desenvolvimento); gestão de conflitos e absenteísmo;
+                coordenação de equipes; participação em reuniões gerenciais; apresentação e acompanhamento de indicadores;
+                alinhamento com clientes; gestão de custos e ativos; melhoria contínua; segurança e confiabilidade operacional.
+              </div>
+            </li>
+
+            <li class="item">
+              <h3>MAKEEN ENERGY DO BRASIL LTDA — Técnico de Manutenção IV</h3>
+              <div class="meta">12/2020 – 05/2025</div>
+              <div class="small">
+                Planejamento e execução de manutenção; atuação em equipamentos da indústria de GLP; carrosséis P13, P20 e P45;
+                parametrização de inversores WEG e SEW; instalação/manutenção de soft starters; lanças telescópicas; detectores de vazamento;
+                balanças; componentes elétricos/mecânicos/eletrônicos/pneumáticos; 5S; melhorias em equipamentos e processos.
+              </div>
+            </li>
+
+            <li class="item">
+              <h3>MAKEEN ENERGY DO BRASIL LTDA — Técnico de Manutenção III</h3>
+              <div class="meta">05/2013 – 06/2018</div>
+              <div class="small">
+                Manutenção preventiva e corretiva; suporte técnico; melhoria contínua e confiabilidade; análise de falhas e melhorias operacionais.
+              </div>
+            </li>
+
+            <li class="item">
+              <h3>CONSIGÁS DISTRIBUIDORA DE GÁS LTDA — Mecânico de Manutenção</h3>
+              <div class="meta">06/2019 – 12/2020</div>
+              <div class="small">
+                Manutenção emergencial/corretiva programada/preventiva; equipamentos mecânicos/elétricos/pneumáticos; lubrificação de transportadores;
+                compressores de ar Atlas Copco; cabine de pintura; carrossel industrial; reuniões de desempenho e melhorias.
+              </div>
+            </li>
+
+            <li class="item">
+              <h3>COPAGAZ DISTRIBUIDORA S/A — Ajudante de Mecânico</h3>
+              <div class="meta">03/2007 – 12/2012</div>
+              <div class="small">
+                Manutenção em carrossel de envase de GLP Vaira y Del Grosso; transportadores telescópicos; bombas de GLP/tinta; compressores;
+                foco em durabilidade, segurança operacional e prazos de envase.
+              </div>
+            </li>
+
+            <li class="item">
+              <h3>EMI S/A — Caldeireiro</h3>
+              <div class="meta">10/2005 – 05/2006</div>
+              <div class="small">
+                Confecção, reparo e instalação de peças; fabricação e manutenção de caldeiras, tanques e reservatórios; corte e modelagem de materiais;
+                fabricação de esquadrias/portas/grades e peças similares.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <section aria-label="Competências">
+          <h2 class="section-title">Competências</h2>
+          <p class="small">
+            Gestão de pessoas • liderança de equipes • gestão de conflitos • planejamento de manutenção • manutenção preventiva e corretiva •
+            gestão de ativos • controle de absenteísmo • gestão de custos • melhoria contínua • análise e solução de problemas •
+            boa comunicação e oratória • feedback e desenvolvimento de equipe • alinhamento operacional com clientes •
+            noções das normas NBR 13523 e NBR 5410.
+          </p>
+        </section>
+      </main>
+
+      <aside class="card" id="publicar" aria-label="Publicação e arquivos">
+        <h2 class="section-title">Publicar / Enviar para LinkedIn e RH</h2>
+
+        <div class="item">
+          <h3>1) Use o link do site + anexe o PDF</h3>
+          <p class="small" style="margin:8px 0 0 0;">
+            GitHub Pages hospeda seu site e seu PDF (link público). Em portais de RH, você normalmente anexa o PDF.
+            Quando existir campo “Website/Portfólio”, cole o link do site.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="filebox" aria-label="Upload local">
+          <strong>Upload (local) + pré-visualização</strong>
+          <p class="small">
+            Selecione um arquivo para pré-visualizar aqui (não envia para servidor).
+          </p>
+          <input id="file" type="file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" />
+          <p id="fileInfo" class="small" style="margin:10px 0 0 0;"></p>
+
+          <div id="preview" class="preview" aria-label="Pré-visualização"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="item">
+          <h3>Link direto do CV</h3>
+          <p class="small">
+            Depois de publicar no GitHub Pages:
+            <code class="inline">https://SEUUSUARIO.github.io/SEUREPOSITORIO/assets/Elvis-De-Souza-Rocha-CV.pdf</code>
+          </p>
+          <div class="actions">
+            <button class="btn" id="copyCvLink" type="button">Copiar modelo</button>
+            <button class="btn" id="copySiteLink" type="button">Copiar modelo do site</button>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="item">
+          <h3>Checklist rápido (LinkedIn / RH)</h3>
+          <ul class="small" style="margin:8px 0 0 16px;">
+            <li>LinkedIn: adicione o link do site em “Informações de contato” e em “Destaques”.</li>
+            <li>RH/ATS: anexe o PDF e, quando houver campo “Portfólio/Website”, cole o link do site.</li>
+            <li>Padronize o nome do PDF (ex.: <code class="inline">Elvis-De-Souza-Rocha-CV.pdf</code>).</li>
+          </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="item">
+          <h3>Contatos</h3>
+          <p class="small" style="margin:8px 0 0 0;">
+            WhatsApp: (21) 98425-8199<br/>
+            LinkedIn: <a href="https://www.linkedin.com/in/elvis-rocha-equipamentos-glp-602a2492" target="_blank" rel="noreferrer">/in/elvis-rocha-equipamentos-glp-602a2492</a>
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Elvis de Souza Rocha — Hospedado no GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Upload local + preview (PDF e imagem)
+    const file = document.getElementById("file");
+    const fileInfo = document.getElementById("fileInfo");
+    const preview = document.getElementById("preview");
+
+    function clearPreview(){
+      preview.style.display = "none";
+      preview.innerHTML = "";
+    }
+
+    file.addEventListener("change", () => {
+      const f = file.files && file.files[0];
+      if (!f) { fileInfo.textContent = ""; clearPreview(); return; }
+
+      const sizeMB = (f.size / (1024*1024)).toFixed(2);
+      fileInfo.textContent = `Selecionado: ${f.name} (${sizeMB} MB)`;
+
+      const url = URL.createObjectURL(f);
+      clearPreview();
+
+      // Pré-visualização só para PDF e imagem (doc/docx não dá pra renderizar nativamente no navegador)
+      if (f.type === "application/pdf") {
+        preview.style.display = "block";
+        preview.innerHTML = `<iframe title="Pré-visualização do PDF" src="${url}"></iframe>`;
+      } else if (f.type.startsWith("image/")) {
+        preview.style.display = "block";
+        preview.innerHTML = `<img alt="Pré-visualização da imagem" src="${url}" />`;
+      } else {
+        clearPreview();
+      }
+    });
+
+    // Copiar links modelo
+    document.getElementById("copyCvLink").addEventListener("click", async () => {
+      const txt = "https://SEUUSUARIO.github.io/SEUREPOSITORIO/assets/Elvis-De-Souza-Rocha-CV.pdf";
+      try { await navigator.clipboard.writeText(txt); alert("Modelo do link do CV copiado."); }
+      catch(e){ prompt("Copie o link abaixo:", txt); }
+    });
+
+    document.getElementById("copySiteLink").addEventListener("click", async () => {
+      const txt = "https://SEUUSUARIO.github.io/SEUREPOSITORIO/";
+      try { await navigator.clipboard.writeText(txt); alert("Modelo do link do site copiado."); }
+      catch(e){ prompt("Copie o link abaixo:", txt); }
+    });
+  </script>
+</body>
+</html>
